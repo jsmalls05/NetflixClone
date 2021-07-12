@@ -26,7 +26,7 @@ export default function Featured({type}) {
                     </select>
                 </div>
             )}
-            <img src="https://images.hdqwalls.com/download/black-goku-dragon-ball-super-os-2048x1152.jpg" alt="" />
+            <img src="https://wallpapercave.com/wp/wp6877707.png" alt="" />
             <div className="info">
                 <img src="https://cdn2.hubspot.net/hubfs/467532/ABOUT_PAGE/Ready%20Player%20One%20VR%201.jpg" alt="" />
                 <span className="desc">
