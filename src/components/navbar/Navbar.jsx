@@ -33,7 +33,7 @@ export const Navbar = () => {
                     <ArrowDropDown className="icon"/>
                     <div className="options">
                         <span>Settings</span>
-                        <span>Logout</span>
+                        <a href="/Register"><button><span>Log Out</span></button></a>
                     </div>
                     </div>
                     
