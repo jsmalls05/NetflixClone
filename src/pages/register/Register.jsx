@@ -38,8 +38,9 @@ export default function Register() {
                     <form className="input">
                     <input type="password" placeholder="password" ref={passwordRef}/>
                     <button className="registerButton" onClick={handleFinish}>Start</button>
-                </form>
-                )}            
+                </form>            
+                )}
+                <a href="/Main"><button className="tbutton">7 Day Trail</button></a>        
             </div>        
         </div>
     )
