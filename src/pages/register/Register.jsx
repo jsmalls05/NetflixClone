@@ -1,26 +1,13 @@
-import { useRef, useState } from "react"
 import "./register.scss"
 
 export default function Register() {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
 
-    const emailRef = useRef()
-    const passwordRef = useRef()
-
-    const handleStart = ()=>{
-        setEmail(emailRef.current.value)
-    };
-    
-    const handleFinish = ()=>{
-        setPassword(passwordRef.current.value)
-    };
     return (
         <div className="register">
             <div className="top">
                 <div className="wrapper">                
                 <img className="logo" src="https://logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png" alt="" />
-                <button className="loginButton">Sign In</button>
+                <a href="/"><button className="loginButton">Sign In</button></a>
                 </div>
             </div>
             <div className="container">
@@ -29,21 +16,13 @@ export default function Register() {
                 <p>
                     Ready to watch? Enter your email to create or restart your membership.
                 </p>
-                {!email ? (
-                    <div className="input">
-                    <input type="email" placeholder="Email Address" ref={emailRef}/>
-                    <button className="registerButton" onClick={handleStart}>Get Started</button>
-                </div>
-                    ) : (
-                    <form className="input">
-                    <input type="password" placeholder="password" ref={passwordRef}/>
-                    <button className="registerButton" onClick={handleFinish}>Start</button>
-                </form>            
-                )}
-                <a href="/Main"><button className="tbutton">7 Day Trail</button></a>        
+                
+                    <div className="new">
+                    <a href="/Main"><button className="registerButton">WATCH FREE FOR 14 DAYS</button></a>
+                    </div>    
             </div>        
         </div>
     )
-}
+};
 
 

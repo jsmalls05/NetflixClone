@@ -19,7 +19,7 @@
                 color: white;
                 border-radius: 5px;
                 padding: 5px 15px;
-                font-size: 16px;
+                font-size: 20px;
                 font-weight: 500;
                 cursor: pointer;
             }
@@ -45,36 +45,22 @@
         p {
             font-style: 20px;
         }
-        .input {
-            width: 50%;
-            background-color: white;
+        .new {
+            width: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             margin-top: 20px;
-            height: 50px;
+            height: 80px;
             border-radius: 5px;
-            input {
-                flex: 9;
-                height: 100%;
-                border: none;
-                padding: 0 10px;
-            }
             .registerButton {
-                flex: 3;
-                height: 100%;
                 background-color: red;
                 border: none;
                 color: white;
-                font-size: 25px;
-                cursor: pointer;
-            }
-            .tbutton {
-                height: 100%;
-                background-color: red;
-                border: none;
-                color: white;
-                font-size: 25px;
+                border-radius: 10px;
+                padding: 20px 30px;
+                font-size: 40px;
+                font-weight: 500;
                 cursor: pointer;
             }
         }
