@@ -16,7 +16,7 @@ export default function Login() {
                     <button className="loginButton">Sign In</button>
                     <span>New to Netflix? <a href="/Register">Sign up now.</a></span>
                     <small>
-                        This page is protected by Google reCAPTCHA to ensure you're not a bot. <b>Learn more</b>
+                        This page is protected by Google reCAPTCHA to ensure you're not a bot. <b>Learn more</b> 
                     </small>
                 </form>
             </div>        
