@@ -10,7 +10,7 @@ function Featured() {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(api.fetchNetflixOriginals);
+            const request = await axios.get(api.fetchTrending);
             console.log(request);
             setMovie(
                 request.data.results[
