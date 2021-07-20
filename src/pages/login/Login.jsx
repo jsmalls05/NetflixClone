@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 import "./login.scss"
 
 export default function Login() {
@@ -11,14 +12,14 @@ export default function Login() {
             <div className="container">
                 <form>
                     <h1>Sign In</h1>
-                    <input type="email" placeholder="Email or Phone Number" />
-                    <input type="password" placeholder="Password" />
-                    <button className="loginButton">Sign In</button>
+                    <input type="email" placeholder="Email or Phone Number" required/>
+                    <input type="password" placeholder="Password" required/>
+                    <Link to="/Main"><button>Sign In</button></Link>
                     <span>New to Netflix? <a href="/Register">Sign up now.</a></span>
                     <small>
-                        This page is protected by Google reCAPTCHA to ensure you're not a bot. <b>Learn more</b> 
+                        This page is protected by Google reCAPTCHA to ensure you're not a bot. <b>Learn more</b>
                     </small>
-                </form>
+                </form>    
             </div>        
         </div>
     )
