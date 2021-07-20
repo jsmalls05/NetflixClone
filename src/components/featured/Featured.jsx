@@ -1,50 +1,62 @@
 import "./featured.scss"
-import PlayArrow from "@material-ui/icons/PlayArrow";
-import InfoOutlined from '@material-ui/icons/InfoOutlined';
+import axios from "../../axios"
+import api from "../../api/api"
+import React, {useState, useEffect } from 'react'
 
-export default function Featured({type}) {
+
+
+function Featured() {
+    const [movie, setMovie] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const request = await axios.get(api.fetchNetflixOriginals);
+            console.log(request);
+            setMovie(
+                request.data.results[
+                    Math.floor(Math.random() * request.data.results.length -1)
+                ]
+            );
+            return request;
+        }
+
+        fetchData();
+    }, [])
+    
+    function truncate(str,n){
+        return str?.length > n ? str.substr(0,n-1) +"..." : str;
+    }
+
     return (
-        <div className="featured">
-            {type && (
-                <div className="category">
-                    <span>{type === "movie" ? "Movies" : "Series"}</span>
-                    <select name="genre" id="genre">
-                        <option>Genre</option>
-                        <option value="adventure">Adventure</option>
-                        <option value="comdey">Comdey</option>
-                        <option value="crime">Crime</option>
-                        <option value="fantasy">Fantasy</option>
-                        <option value="historical">Historical</option>
-                        <option value="horror">Horror</option>
-                        <option value="romance">Romance</option>
-                        <option value="sci-fi">Sci-fi</option>
-                        <option value="thriller">Thriller</option> 
-                        <option value="western">Western</option>
-                        <option value="animation">Animation</option>
-                        <option value="drama">Drama</option>
-                        <option value="documentary">Documentary</option>
-                    </select>
+        <div>
+            <header className="banner"
+            style={{
+                backgroundSize: "cover",
+                backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+                backgroundPosition: "center center",
+            }}
+            >
+
+                <div className="banner_contents">
+                    <h1 className="banner_title">
+                    {movie?.title || movie?.name || movie?.original_name}
+                    </h1>
+
+                    <div className="banner_buttons">
+                        <button className="banner_button">Play</button>
+                        <button className="banner_button">My List</button>
+                    </div>
+                    <h1 className="banner_description">
+                        {truncate(movie?.overview,150)}
+                    </h1>
                 </div>
-            )}
-            <img src="https://wallpapercave.com/wp/wp6877707.png" alt="" />
-            <div className="info">
-                <img src="https://cdn2.hubspot.net/hubfs/467532/ABOUT_PAGE/Ready%20Player%20One%20VR%201.jpg" alt="" />
-                <span className="desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, amet architecto dolorem aliquid, distinctio placeat veritatis ipsa in explicabo quos fugit sit rerum? Rem maiores, laudantium explicabo quisquam delectus rerum tempora dignissimos! Ipsum culpa molestias, quos temporibus necessitatibus exercitationem, quasi laudantium in reiciendis eum quo expedita possimus porro assumenda deserunt?
-                </span>
-                <div className="buttons">
-                    <button className="play">
-                        <PlayArrow/>
-                        <span>Play</span>
-                    </button>
-                    <button className="more">
-                        <InfoOutlined/>
-                        <span>Info</span>
-                    </button>
+                <div className="banner--fadeBottom">
+
                 </div>
-            </div>
+            </header>
+            
         </div>
     )
 }
 
-
+export default Featured
