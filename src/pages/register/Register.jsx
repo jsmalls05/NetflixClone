@@ -7,8 +7,9 @@ export default function Register() {
             <div className="top">
                 <div className="wrapper">                
                 <img className="logo" src="https://logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png" alt="" />
-                <a href="/"><button className="loginButton">Sign In</button></a>
+                <a href="/"><button className="loginButton">Sign In</button></a>                
                 </div>
+                
             </div>
             <div className="container">
                 <h1>Unlimited movies, TV shows, and more.</h1>
