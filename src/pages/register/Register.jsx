@@ -5,9 +5,9 @@ export default function Register() {
     return (
         <div className="register">
             <div className="top">
-                <div className="wrapper">                
-                <img className="logo" src="https://logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png" alt="" />
-                <a href="/"><button className="loginButton">Sign In</button></a>                
+                <div className="wrapper">      
+                <a href="/">          
+                <img className="logo" src="https://logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png" alt="" /></a>           
                 </div>
                 
             </div>
@@ -20,7 +20,9 @@ export default function Register() {
                 
                     <div className="new">
                     <a href="/Main"><button className="registerButton">WATCH FREE FOR 14 DAYS</button></a>
+                    
                     </div>    
+                    <a href="/"><button className="loginButton">Sign In</button></a>     
             </div>        
         </div>
     )
