@@ -1,35 +1,75 @@
-.row {
-    color: #fff;
-    margin-left: 20px;
-}
-
-.row-posters {
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    padding: 20px;
-}
-
-.row-posters::-webkit-scrollbar {
-    display: none;
-}
-
-.row-poster {
-    object-fit: contain;
-    width: 100%;
-    max-height: 120px;
-    transition: transform 450ms;
-    margin-right: 10px;
-}
-
-.row-poster:hover {
-    transform: scale(1.08);
-}
-
-.row-posterLarge {
-    max-height: 250px;
-}
-
-.row-posterLarge:hover {
-    transform: scale(1.09);
-}
+  .list {
+      width: 100%;
+      margin-top: 10px;
+      .listTitle {
+          color: white;
+          font-size: 20px;
+          font-weight: 500;
+          margin-left: 50px;
+      }
+      .wrapper {
+          position: relative;
+          .sliderArrow {
+              width: 50px;
+              height: 100%;
+              background-color: rgb(22, 22, 22, 0.5);
+              color: white;
+              position: absolute;
+              z-index: 99;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              cursor: pointer;
+              &.left {
+                  left: 0;
+              }
+              &.right {
+                  right: 0;
+              }
+          }
+          .container {
+              margin-left: 50px;
+              display: flex;
+              margin-top: 10px;
+              width: max-content;
+              transform: translateX(0px);
+              transition: all 1s ease;
+          }
+      }
+  }
+  
+  .row {
+      margin-left: 20px;
+      color: white;
+  }
+  
+  .rows_posters {
+      display: flex;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      padding: 20px;
+  }
+  
+  .rows_imageposter {
+      object-fit: contain;
+      width: 100%;
+      max-height: 100px;
+      transition: transform 450ms;
+      margin-right: 10px;
+  }
+  
+  .rows_posters::-webkit-scrollbar {
+      display: none;
+  }
+  
+  .row_posterLarge {
+      max-height: 250px;
+  }
+  
+  .row_posterLarge:hover {
+      transform: scale(1.09);
+  }
+  
+  .rows_imageposter:hover {
+      transform: scale(1.08);
+  }
